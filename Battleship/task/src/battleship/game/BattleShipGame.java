@@ -19,7 +19,7 @@ public class BattleShipGame {
 
     public static void initialize() {
 
-        System.out.println("Player 1, place your ships on the game field");
+        System.out.println("\nPlayer 1, place your ships on the game field");
         drawGameField(1, false);
 
         placeShip(1, Ship.AIRCRAFT_CARRIER);
@@ -37,11 +37,11 @@ public class BattleShipGame {
         placeShip(1, Ship.DESTROYER);
         drawGameField(1, false);
 
-        System.out.println("Press Enter and pass the move to another player");
+        System.out.println("\nPress Enter and pass the move to another player");
 
         scanner.nextLine();
 
-        System.out.println("Player 2, place your ships on the game field");
+        System.out.println("\nPlayer 2, place your ships on the game field");
         drawGameField(2, false);
 
         placeShip(2, Ship.AIRCRAFT_CARRIER);
@@ -65,13 +65,13 @@ public class BattleShipGame {
 
         while (!isFinished) {
 
-            System.out.println("Press Enter and pass the move to another player");
+            System.out.println("\nPress Enter and pass the move to another player");
             scanner.nextLine();
             game(1);
 
             if (isFinished) break;
 
-            System.out.println("Press Enter and pass the move to another player");
+            System.out.println("\nPress Enter and pass the move to another player");
             scanner.nextLine();
             game(2);
         }
@@ -147,9 +147,6 @@ public class BattleShipGame {
             }
 
             currentShip.remove(currentCell);
-
-            System.out.println("Attacked fleet " + attackedFleet.size());
-            System.out.println("Current ship " + currentShip.size());
 
             if (currentShip.size() == 0) {
 
@@ -330,7 +327,7 @@ public class BattleShipGame {
             gameField = playerTwoGameField;
         }
 
-        System.out.print(" ");
+        System.out.print("\n ");
 
         for (int k = 1; k <= gameField.length; k++) {
             System.out.print(" " + k);
